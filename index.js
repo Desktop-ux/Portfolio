@@ -328,7 +328,7 @@ v4.from(".view-4 h1", {
 
 v4.from(".view-4 .ed", {
   scrollTrigger: {
-    trigger: ".view-4 .ed",    
+    trigger: ".view-4 .education",    
     start: "top 60%",
     end: "bottom 80%",
     scrub: true,  
@@ -448,19 +448,7 @@ v6.from(".view-6 .form p" , {
   duration: 1   
 }, 5)
 
-v6.from(".view-6 .form input" , {
-  scrollTrigger: {
-    trigger: ".view-6 .form h1",
-    start: "top 80%",
-    end: "bottom 60%",
-    scrub: true,
-    // markers: true
-  },
-  y: 50,
-  opacity: 0,
-  duration: 1,
-  stagger:0.2   
-}, 5)
+
 v6.from(".view-6 .form select" , {
   scrollTrigger: {
     trigger: ".view-6 .form h1",
