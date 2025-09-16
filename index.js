@@ -1,19 +1,31 @@
 
 const lenis = new Lenis({
-  duration: 2.0, // higher duration = smoother scroll
-  easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
   smooth: true,
   lerp: 0.05,
-  direction: 'vertical'
 });
 
+// Pause Lenis at start
+// lenis.stop();
 
 function raf(time) {
   lenis.raf(time);
   requestAnimationFrame(raf);
 }
-
 requestAnimationFrame(raf);
+
+// When loader is done, GSAP onComplete calls: lenis.start()
+
+// Tell ScrollTrigger to use Lenis' scroll values
+lenis.on('scroll', ScrollTrigger.update);
+
+gsap.ticker.add((time) => {
+  lenis.raf(time * 1000);
+});
+
+// Make ScrollTrigger use GSAP’s ticker (better sync)
+ScrollTrigger.defaults({
+  scroller: document.body
+});
 
 
 const serves = document.querySelectorAll(".services .serve");
@@ -148,6 +160,346 @@ function changeEmoji() {
 }
 
 setInterval(changeEmoji, 1000); // Change emoji every 2 seconds
+
+
+window.addEventListener("load", () => {
+  // Force page to start at the top
+  window.scrollTo(0, 0);
+
+
+
+  let tl = gsap.timeline({
+    onComplete: () => {
+      // Enable scrolling AFTER animation finishes
+      document.body.style.overflow = "auto";
+
+      // If you’re using Lenis, restart it after enabling scroll
+    
+    }
+  });
+
+  // Loader animation
+  tl.to(".loading", {
+    y: "-100vh",
+    duration: 1.5,
+    delay: 2,
+    ease: "power4.inOut"
+  });
+
+  // Reveal main content
+  tl.to("main", {
+    opacity: 1,
+    duration: 0.5,
+    ease: "power2.out"
+  }, "-=0.5");
+});
+
+
+
+let v2 = gsap.timeline()
+
+v2.from(".view-2  h1", {
+  scrollTrigger: {
+    trigger: ".view-2  h1",
+    start: "top 80%", 
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1
+
+
+}, 1)
+
+v2.from(".view-2  p", {
+  scrollTrigger: {
+    trigger: ".view-2  p",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1
+}, 1) 
+
+v2.from(".view-2 .services", {
+  scrollTrigger: {
+    trigger: ".view-2 .services",
+    start: "top 80%",     
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 150,
+  opacity: 0,
+  duration: 1.5 ,
+  stagger:0.2
+}, 1)
+
+let v3 = gsap.timeline({delay: v2.duration()})
+
+v3.from(".view-3 h1", {
+  scrollTrigger: {
+    trigger: ".view-3 h1",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1   
+}, 2)
+
+v3.from(".view-3 .categories", {
+  scrollTrigger: {
+    trigger: ".view-3 .categories", 
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1   
+}, 2)
+
+v3.from(".view-3 p", {
+  scrollTrigger: {
+    trigger: ".view-3 p",     
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1   
+}, 2)
+
+v3.from(".view-3 .projects", {
+  scrollTrigger: {
+    trigger: ".view-3 .projects",   
+    start: "top 100%",
+    end: "bottom 60%",
+    scrub: true,  
+    // markers: true
+    ease: "power2.out"
+  },
+  y: 60,
+  opacity: 0,
+  duration: 1,
+  // stagger:0.2
+}, 2)
+
+v3.from(".view-3 .pro", {
+  scrollTrigger: {
+    trigger: ".view-3 .pro",   
+    start: "top 100%",   
+    end: "bottom 40%",
+    scrub: true,  
+    // markers: true,
+    ease: "bounce.out"
+  },
+  y: 60,
+  opacity: 0,
+  duration: 1.5 ,
+  stagger:0.1
+
+},2)
+
+let v4 = gsap.timeline({delay: v3.duration()})
+v4.from(".view-4 h1", {
+  scrollTrigger: {
+    trigger: ".view-4 h1",    
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,  
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1   
+}, 3)
+
+v4.from(".view-4 .ed", {
+  scrollTrigger: {
+    trigger: ".view-4 .ed",    
+    start: "top 60%",
+    end: "bottom 80%",
+    scrub: true,  
+    // markers: true
+    ease: "power2.out"
+  },
+  x: -80,
+  opacity: 0,
+  duration: 2 ,
+  stagger:0.1
+}, 4)
+
+
+
+
+
+let v5 = gsap.timeline({delay: v4.duration()})
+v5.from(".view-5 h1", {
+  scrollTrigger: {
+    trigger: ".view-5 h1",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1   
+}, 4)
+
+v5.from(".view-5 p", {
+  scrollTrigger: {
+    trigger: ".view-5 p",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1   
+}, 4)
+
+
+
+v5.from(".view-5 .skills", {
+  scrollTrigger: {
+    trigger: ".view-5 .skills",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+    ease: "power2.out"
+  },
+  y: 60,
+  opacity: 0,
+  duration: 1.5 ,
+  stagger:0.2
+},4)
+
+
+let v6 = gsap.timeline({delay: v5.duration()})
+v6.from(".view-6 .details", {
+  scrollTrigger: {
+    trigger: ".view-6 .details",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true  
+    ease: "power2.out"
+  },
+  y: 60,  
+  x:-50,
+  opacity: 0,
+  duration: 1.5 ,
+  stagger:0.2
+}, 5)
+
+v6.from(".view-6 .form", {
+  scrollTrigger: {
+    trigger: ".view-6 ",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+    ease: "power2.out"
+  },
+  y: 60,
+  x:80,
+  opacity: 0,
+  duration: 1.5 ,
+  stagger:0.2
+}, 5 )
+
+v6.from(".view-6 .form h1" , {
+  scrollTrigger: {
+    trigger: ".view-6 .form h1",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1   
+}, 5)
+v6.from(".view-6 .form p" , {
+  scrollTrigger: {
+    trigger: ".view-6 .form h1",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1   
+}, 5)
+
+v6.from(".view-6 .form input" , {
+  scrollTrigger: {
+    trigger: ".view-6 .form h1",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger:0.2   
+}, 5)
+v6.from(".view-6 .form select" , {
+  scrollTrigger: {
+    trigger: ".view-6 .form h1",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger:0.2   
+}, 5)
+v6.from(".view-6 .form textarea" , {
+  scrollTrigger: {
+    trigger: ".view-6 .form h1",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger:0.2   
+}, 5)
+v6.from(".view-6 .form .submit" , {
+  scrollTrigger: {
+    trigger: ".view-6 .form h1",
+    start: "top 80%",
+    end: "bottom 60%",
+    scrub: true,
+    // markers: true
+  },
+  y: 50,
+  opacity: 0,
+  duration: 1,
+  stagger:0.2   
+}, 5)
 
 
 

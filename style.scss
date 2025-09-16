@@ -71,6 +71,9 @@ main {
 body, main, .hero {
     overflow: auto;
 }
+body{
+    overflow: hidden;
+}
 
 
 .view-1, .view-2, .view-3, .view-4, .view-5, .view-6 {
@@ -1072,4 +1075,35 @@ body, main, .hero {
     }
 }
 
+.loading{
+  position: fixed;   /* sits on top no matter what */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: black; /* or gradient */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;     /* always above everything */
 
+    .loader{
+        font-size: 3rem;
+  color: white;
+  position: relative;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+  background-size: 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 3s linear infinite;
+        
+      
+    }
+
+    
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+    
+}
