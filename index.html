@@ -88,7 +88,7 @@
 
         <div class="view-2">
             <h1>My Quality Services</h1>
-            <p >I put your ideas and thus your wishes in the form of a unique web project that inspires you and you
+            <p>I put your ideas and thus your wishes in the form of a unique web project that inspires you and you
                 customers.</p>
 
             <div class="services">
@@ -149,7 +149,7 @@
                 <span class="cat_hover"></span>
             </div>
 
-            <div  class="projects_All projects">
+            <div class="projects_All projects">
                 <div class="pro">
                     <img src="Fylla.jpg" alt="">
                 </div>
@@ -281,9 +281,9 @@
                         <p>MySQL</p>
                     </div>
                 </div>
-         </div>
+            </div>
 
-        <div class="view-6">
+            <div class="view-6">
                 <div class="details">
                     <div class="detail">
                         <div class="detail_icon"><i class="fa-solid fa-phone-volume"></i></div>
@@ -310,42 +310,42 @@
                     </div>
                 </div>
 
-                <form class="form">
+            <form  class="form">
                     <h1>Let's Work TOgether!</h1>
                     <p>I design and code beautifully simple things and i love what i do. Just simple like that!</p>
                     <div class="inputs">
-                        <input type="text" placeholder="First name">
-                        <input type="text" placeholder="Last name">
-                        <input type="email" placeholder="Email address">
-                        <input type="tel" placeholder="Phone number">
+                        <input type="text" name="fname" id="fname" placeholder="First name">
+                        <input type="text" name="lname" id="lname" placeholder="Last name">
+                        <input type="email" name="email" id="email" placeholder="Email address">
+                        <input type="tel" name="telph" id="telph" placeholder="Phone number">
                     </div>
 
 
                     <p>
 
-                        <select id="pet-select">
+                        <select name="service" id="pet-select">
                             <button>
                                 <selectedcontent></selectedcontent>
                             </button>
 
                             <option value="">-Please choose an option-</option>
-                            <option value="cat">
+                            <option value="Web Design">
                                 <span class="icon" aria-hidden="true">🔴</span><span class="option-label">Web
                                     Design</span>
                             </option>
-                            <option value="dog">
+                            <option value="Animated sites">
                                 <span class="icon" aria-hidden="true">🟡</span><span class="option-label">Animated
                                     sites</span>
                             </option>
-                            <option value="hamster">
+                            <option value="React App">
                                 <span class="icon" aria-hidden="true">🔵</span><span class="option-label">React
                                     App</span>
                             </option>
-                            <option value="chicken">
+                            <option value="Database Mgnt">
                                 <span class="icon" aria-hidden="true">🟠</span><span class="option-label">Database
                                     Mgnt</span>
                             </option>
-                            <option value="fish">
+                            <option value="Programming">
                                 <span class="icon" aria-hidden="true">🟢</span><span
                                     class="option-label">Programming</span>
                             </option>
@@ -353,15 +353,16 @@
                         </select>
                     </p>
 
-                    <textarea id="" cols="40" rows="10" maxlength="2000" placeholder="Message"></textarea>
+                    <textarea  name="Messagetext" id="" cols="40" rows="10" maxlength="2000" id="Messagetext"
+                        placeholder="Message"></textarea>
 
 
-                    <butto class="submit">Send Message</button>
+                    <button type="submit"  class="submit">Send Message</button>
 
                 </form>
             </div>
 
-        <div class="footer">
+            <div class="footer">
                 <div class="footer_logo">
                     <img src="logo.png" alt="">
                 </div>
@@ -373,23 +374,27 @@
                     <a href="">Contact</a>
                 </div>
                 <p>Thanks for visiting!! <span class="emoji">🤗</span></p>
-         </div>
+            </div>
 
     </main>
 
 
 
-
-
-
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script src="email.js"></script>
 
 
     <!-- LENIS -->
-    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script> 
+    <script src="https://unpkg.com/lenis@1.3.11/dist/lenis.min.js"></script>
     <!-- GSAP -->
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js" integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js" integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-     <!-- My Js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/gsap.min.js"
+        integrity="sha512-NcZdtrT77bJr4STcmsGAESr06BYGE8woZdSdEgqnpyqac7sugNO+Tr4bGwGF3MsnEkGKhU2KL2xh6Ec+BqsaHA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.13.0/ScrollTrigger.min.js"
+        integrity="sha512-P2IDYZfqSwjcSjX0BKeNhwRUH8zRPGlgcWl5n6gBLzdi4Y5/0O4zaXrtO4K9TZK6Hn1BenYpKowuCavNandERg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- My Js -->
     <script src="index.js"></script>
 </body>
 

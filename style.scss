@@ -19,7 +19,8 @@ body {
 
 
 html {
-  scroll-behavior: auto; /* keep it auto for Lenis to control */
+    scroll-behavior: auto;
+    /* keep it auto for Lenis to control */
 }
 
 
@@ -27,7 +28,7 @@ html {
 body {
     background: black;
     color: white;
-   
+
 }
 
 /* Apply to the element that needs scrollbar, 
@@ -68,18 +69,29 @@ main {
     // height: 100%;
     overflow: auto;
 }
-body, main, .hero {
+
+body,
+main,
+.hero {
     overflow: auto;
 }
-body{
+
+body {
     overflow: hidden;
 }
 
 
-.view-1, .view-2, .view-3, .view-4, .view-5, .view-6 {
+.view-1,
+.view-2,
+.view-3,
+.view-4,
+.view-5,
+.view-6 {
     width: 100%;
-    min-height: 100vh; /* full viewport minimum */
-    position: relative; /* remove absolute positioning if any */
+    min-height: 100vh;
+    /* full viewport minimum */
+    position: relative;
+    /* remove absolute positioning if any */
 }
 
 
@@ -252,11 +264,11 @@ body{
         }
     }
 
-    .p_desk{
+    .p_desk {
         display: none;
     }
 
-    .p_mob{
+    .p_mob {
         padding: 1rem 0;
         font-size: 1.25rem;
         line-height: 1.5;
@@ -281,7 +293,7 @@ body{
 
     }
 
-    .cv_desk{
+    .cv_desk {
         display: none;
     }
 
@@ -720,7 +732,7 @@ body{
         text-align: center;
     }
 
-   .skills {
+    .skills {
         width: 100%;
         padding: 1rem 0;
         display: flex;
@@ -793,8 +805,8 @@ body{
             gap: 1rem;
 
             .detail_icon {
-                width: 20vw;
-                height: 20vw;
+                width: 15vw;
+                height: 15vw;
                 background: linear-gradient(to right, #8a59cd, #4f27a0, #47248e);
                 border-radius: 50%;
                 display: flex;
@@ -851,6 +863,16 @@ body{
             text-align: center;
         }
 
+        .inputs {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem 0;
+        }
+
         input {
             width: 90%;
             padding: 1rem 0.5rem;
@@ -862,6 +884,7 @@ body{
             outline: none;
             transition: all 0.3s ease;
             margin-bottom: 0.5rem;
+            color: white;
 
             &:focus {
                 border: 1px solid #7146c6;
@@ -988,6 +1011,7 @@ body{
             // border: 1px solid #cccccc;
             // box-shadow: 1px 1px 1px #999999;
             background: black;
+            color: white;
         }
 
 
@@ -1047,6 +1071,7 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
+
         img {
             width: 20%;
         }
@@ -1069,41 +1094,57 @@ body{
         }
     }
 
-    p{
+    p {
         font-size: 1rem;
         color: #784dce;
     }
 }
 
-.loading{
-  position: fixed;   /* sits on top no matter what */
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: black; /* or gradient */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 9999;     /* always above everything */
+.loading {
+    position: fixed;
+    /* sits on top no matter what */
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: black;
+    /* or gradient */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    /* always above everything */
+    letter-spacing: 15px;
+    font-size: 1rem;
+    font-weight: 100;
+    color: white;
+    flex-direction: column;
+    gap: 1rem;
+    text-transform: uppercase;
 
-    .loader{
-        font-size: 3rem;
-  color: white;
-  position: relative;
-  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-  background-size: 200%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 3s linear infinite;
-        
-      
+    .loader {
+        font-weight: 100;
+        font-size: 2rem;
+        color: white;
+        position: relative;
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+        background-size: 200%;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        animation: shimmer 3s linear infinite;
+
+
     }
 
-    
-@keyframes shimmer {
-  0% { background-position: -200% 0; }
-  100% { background-position: 200% 0; }
-}
-    
+
+    @keyframes shimmer {
+        0% {
+            background-position: -200% 0;
+        }
+
+        100% {
+            background-position: 200% 0;
+        }
+    }
+
 }

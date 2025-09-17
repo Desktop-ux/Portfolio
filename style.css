@@ -14,7 +14,8 @@ body {
 }
 
 html {
-  scroll-behavior: auto; /* keep it auto for Lenis to control */
+  scroll-behavior: auto;
+  /* keep it auto for Lenis to control */
 }
 
 body {
@@ -58,7 +59,9 @@ main {
   overflow: auto;
 }
 
-body, main, .hero {
+body,
+main,
+.hero {
   overflow: auto;
 }
 
@@ -66,10 +69,17 @@ body {
   overflow: hidden;
 }
 
-.view-1, .view-2, .view-3, .view-4, .view-5, .view-6 {
+.view-1,
+.view-2,
+.view-3,
+.view-4,
+.view-5,
+.view-6 {
   width: 100%;
-  min-height: 100vh; /* full viewport minimum */
-  position: relative; /* remove absolute positioning if any */
+  min-height: 100vh;
+  /* full viewport minimum */
+  position: relative;
+  /* remove absolute positioning if any */
 }
 
 .hero {
@@ -632,8 +642,8 @@ body {
   gap: 1rem;
 }
 .view-6 .details .detail .detail_icon {
-  width: 20vw;
-  height: 20vw;
+  width: 15vw;
+  height: 15vw;
   background: linear-gradient(to right, #8a59cd, #4f27a0, #47248e);
   border-radius: 50%;
   display: flex;
@@ -681,6 +691,15 @@ body {
   font-weight: 300;
   text-align: center;
 }
+.view-6 form .inputs {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem 0;
+}
 .view-6 form input {
   width: 90%;
   padding: 1rem 0.5rem;
@@ -691,6 +710,7 @@ body {
   outline: none;
   transition: all 0.3s ease;
   margin-bottom: 0.5rem;
+  color: white;
 }
 .view-6 form input:focus {
   border: 1px solid #7146c6;
@@ -787,6 +807,7 @@ body {
   border: none;
   outline: none;
   background: black;
+  color: white;
 }
 .view-6 form .submit {
   margin-top: 1rem;
@@ -861,19 +882,30 @@ body {
 }
 
 .loading {
-  position: fixed; /* sits on top no matter what */
+  position: fixed;
+  /* sits on top no matter what */
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background: black; /* or gradient */
+  background: black;
+  /* or gradient */
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 9999; /* always above everything */
+  z-index: 9999;
+  /* always above everything */
+  letter-spacing: 15px;
+  font-size: 1rem;
+  font-weight: 100;
+  color: white;
+  flex-direction: column;
+  gap: 1rem;
+  text-transform: uppercase;
 }
 .loading .loader {
-  font-size: 3rem;
+  font-weight: 100;
+  font-size: 2rem;
   color: white;
   position: relative;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);

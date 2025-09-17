@@ -740,16 +740,19 @@
     font-weight: 500;
   }
   .loading {
-    position: fixed; /* sits on top no matter what */
+    position: fixed;
+    /* sits on top no matter what */
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: black; /* or gradient */
+    background: black;
+    /* or gradient */
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 9999; /* always above everything */
+    z-index: 9999;
+    /* always above everything */
     letter-spacing: 25px;
     font-size: 1rem;
     font-weight: 100;
@@ -758,8 +761,16 @@
     gap: 1rem;
     text-transform: uppercase;
   }
-  .loading h1 {
+  .loading .loader {
     font-weight: 100;
     position: relative;
+    font-size: 3rem;
+    color: white;
+    position: relative;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    background-size: 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
   }
 }/*# sourceMappingURL=resp.css.map */
