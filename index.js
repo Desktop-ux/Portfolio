@@ -491,3 +491,22 @@ v6.from(".view-6 .form .submit" , {
 
 
 
+document.querySelectorAll('.menu a').forEach(link => {
+  link.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      lenis.scrollTo(target);
+    }
+  });
+});
+
+  // For desktop button
+  document.querySelector(".cv_desk").addEventListener("click", function () {
+    window.open("resume.pdf", "_blank"); // replace with your PDF path
+  });
+
+  // For mobile button
+  document.querySelector(".cv").addEventListener("click", function () {
+    window.open("resume.pdf", "_blank"); // replace with your PDF path
+  });

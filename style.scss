@@ -887,7 +887,7 @@ body {
             color: white;
 
             &:focus {
-                border: 1px solid #7146c6;
+                border: 1px solid #7146c6; background-color: #1a1a1a;
             }
         }
 
@@ -1127,13 +1127,11 @@ body {
         font-size: 2rem;
         color: white;
         position: relative;
-        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+        background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.868), transparent);
         background-size: 200%;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
         animation: shimmer 3s linear infinite;
-
-
     }
 
 

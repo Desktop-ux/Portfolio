@@ -908,7 +908,7 @@ body {
   font-size: 2rem;
   color: white;
   position: relative;
-  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.868), transparent);
   background-size: 200%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
