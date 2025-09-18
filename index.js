@@ -337,10 +337,22 @@ v4.from(".view-4 .ed", {
   },
   x: -80,
   opacity: 0,
-  duration: 2 ,
+  duration: 1 ,
   stagger:0.1
 }, 4)
 
+v4.from(".view-4 .ed h1", {
+  scrollTrigger: {
+    trigger: ".view-4 .ed ",    
+    start: "top 60%",
+    end: "bottom 80%",
+    scrub: true,
+    // markers: true
+  },
+  x: -50,
+  opacity: 0,
+  duration: 1   
+}, 4)
 
 
 
@@ -452,15 +464,14 @@ v6.from(".view-6 .form p" , {
 v6.from(".view-6 .form select" , {
   scrollTrigger: {
     trigger: ".view-6 .form h1",
-    start: "top 80%",
-    end: "bottom 60%",
+    start: "top 60%",
+    end: "bottom 80%",
     scrub: true,
     // markers: true
   },
   y: 50,
   opacity: 0,
-  duration: 1,
-  stagger:0.2   
+ 
 }, 5)
 v6.from(".view-6 .form textarea" , {
   scrollTrigger: {
@@ -510,3 +521,7 @@ document.querySelectorAll('.menu a').forEach(link => {
   document.querySelector(".cv").addEventListener("click", function () {
     window.open("resume.pdf", "_blank"); // replace with your PDF path
   });
+
+
+
+  

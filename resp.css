@@ -587,6 +587,7 @@
   }
   .view-6 form input:focus {
     border: 1px solid #7146c6;
+    background-color: #100817;
   }
   .view-6 form select,
   .view-6 form ::picker(select) {
