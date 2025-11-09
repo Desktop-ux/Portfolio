@@ -361,6 +361,26 @@
     padding: 1rem;
     display: none;
   }
+  .view-3 .projects_ui .pro {
+    width: 40%;
+    height: 15vw;
+    box-shadow: 0px 0px 3px #ffffff;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  .view-3 .projects_ui .pro .techs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+  .view-3 .projects_ui .pro .techs img {
+    width: 5%;
+  }
   .view-3 .projects_anime {
     width: 100%;
     flex-direction: row;
@@ -371,6 +391,26 @@
     padding: 1rem;
     display: none;
   }
+  .view-3 .projects_anime .pro {
+    width: 40%;
+    height: 15vw;
+    box-shadow: 0px 0px 3px #ffffff;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  .view-3 .projects_anime .pro .techs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+  .view-3 .projects_anime .pro .techs img {
+    width: 5%;
+  }
   .view-3 .projects_mini {
     width: 100%;
     flex-direction: row;
@@ -380,6 +420,26 @@
     flex-wrap: wrap;
     padding: 1rem;
     display: none;
+  }
+  .view-3 .projects_mini .pro {
+    width: 40%;
+    height: 15vw;
+    box-shadow: 0px 0px 3px #ffffff;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    justify-content: space-between;
+    padding: 2rem;
+  }
+  .view-3 .projects_mini .pro .techs {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    padding: 1rem 0;
+    gap: 1rem;
+  }
+  .view-3 .projects_mini .pro .techs img {
+    width: 5%;
   }
   .view-4 {
     padding: 3rem 1.25rem;
