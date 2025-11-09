@@ -312,7 +312,7 @@ v3.from(".view-3 .pro", {
 
 },2)
 
-let v4 = gsap.timeline({delay: v3.duration()})
+let v4 = gsap.timeline()
 v4.from(".view-4 h1", {
   scrollTrigger: {
     trigger: ".view-4 h1",    
