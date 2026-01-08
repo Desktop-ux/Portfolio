@@ -133,6 +133,19 @@ skill_container.forEach((skill) => {
 });
 
 
+let vidtubeLink = document.getElementById('vidtube_go')
+
+vidtubeLink.addEventListener("click", ()=>{
+  window.open("https://vidttube.netlify.app", "_blank")
+})
+
+let foggLink = document.getElementById("fogg_go")
+
+foggLink.addEventListener("click", ()=>{
+  window.open("https://foggarabiaa.netlify.app", "_blank")
+})
+
+
 
 
 let emojis = document.querySelector(".emoji");
