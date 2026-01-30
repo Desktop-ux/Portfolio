@@ -144,6 +144,11 @@ let foggLink = document.getElementById("fogg_go")
 foggLink.addEventListener("click", ()=>{
   window.open("https://foggarabiaa.netlify.app", "_blank")
 })
+let moody_go = document.getElementById("moody_go")
+
+moody_go.addEventListener("click", ()=>{
+  window.open("https://tune-cream.vercel.app", "_blank")
+})
 
 
 
